@@ -80,7 +80,10 @@ To run the data producer, run the following commands:
 
 ```sh
     cd samples
-    rake run_producer
+    cp run_producer.sh.example run_producer.sh
+    # edit run_producer.sh to reflect your real AWS credentials
+    chmod u+x run_producer.sh
+    ./run_producer.sh
 ```
 
 #### Notes
@@ -90,6 +93,7 @@ To run the data producer, run the following commands:
 
   ```sh
       sudo gem install aws-sdk
+      sudo gem install multi_json
   ```
 
 * The script `samples/sample_kcl_producer.rb` takes several parameters that you can use
@@ -105,7 +109,10 @@ To run the data processor, run the following commands:
 
 ```sh
     cd samples
-    rake run
+    cp run_data_processor.sh.example run_data_processor.sh
+    # edit run_producer.sh to reflect your real AWS credentials and JAVA_HOME
+    chmod u+x run_data_processor.sh
+    ./run_data_processor.sh
 ```
 
 #### Notes
